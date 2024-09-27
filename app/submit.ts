@@ -19,7 +19,7 @@ export async function submit(prevState: any, data: FormData) {
     'assignment-id': data.get('assignment'),
   }))
 
-  const res = await (await fetch('http://lighthouse.soe.ucsc.edu/api/v02/submission/peek', {
+  const res = await (await fetch('http://lighthouse.soe.ucsc.edu/api/v03/courses/assignments/submissions/fetch/user/peek', {
     method: 'POST',
     body
   })).json()
